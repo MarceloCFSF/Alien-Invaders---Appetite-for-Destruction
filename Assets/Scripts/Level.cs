@@ -6,16 +6,32 @@ using UnityEngine.UI;
 
 public class Level : MonoBehaviour
 {
-    //variável para armazenar o nome da cena para localizá-la posteriormente
-    [SerializeField] private string nomeLevelJogo;
-    //variável para ativar/desativar menu
-    [SerializeField] private GameObject Level1;
+    public Button Button;
+    public Button BtBack;
 
-    public void AbrirLevel1()
+
+
+    void Start()
     {
-        SceneManager.LoadScene(nomeLevelJogo);
+        Button btn = BtBack.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
+
+        Button btn2 = Button.GetComponent<Button>();
+        btn2.onClick.AddListener(TaskOnClick2);
     }
 
-    
+    void TaskOnClick()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    void TaskOnClick2()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
+
+
+
 
 }
