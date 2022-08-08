@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Scroller : MonoBehaviour
 {
-    
+    //fazer background se mexer
     [SerializeField] private RawImage _img;
     [SerializeField] private float _x, _y;
 
