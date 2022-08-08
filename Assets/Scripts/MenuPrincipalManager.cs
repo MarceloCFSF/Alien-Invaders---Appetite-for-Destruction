@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; 
 using UnityEngine.UI;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class MenuPrincipalManager : MonoBehaviour
 {
@@ -50,10 +53,12 @@ public class MenuPrincipalManager : MonoBehaviour
     
     public void SairJogo()
     {
-        
+        #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
+        #else
+        Application.Quit(); 
+        #endif
         Debug.Log("Sair do Jogo");
-        //Application.Quit(); 
     }
 
 }

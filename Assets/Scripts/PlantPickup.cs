@@ -8,9 +8,9 @@ public class PlantPickup : MonoBehaviour
         if (other.tag == "Player") {
             Inventory inventory = other.GetComponent<Inventory>();
 
-            gameObject.SetActive(false);
             if (inventory) {
                 inventory.PlantCollected();
+                gameObject.SetActive(false);
             }
         }
     }
