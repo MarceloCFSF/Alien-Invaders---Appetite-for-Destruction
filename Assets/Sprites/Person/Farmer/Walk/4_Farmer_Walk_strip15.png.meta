@@ -1,0 +1,464 @@
+fileFormatVersion: 2
+guid: b1b455443e389d74a9a91e21c7ea3246
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4259059934780389556
+    second: 4_Farmer_Walk_strip15_0
+  - first:
+      213: -1861304322377333816
+    second: 4_Farmer_Walk_strip15_1
+  - first:
+      213: -4700621932755980712
+    second: 4_Farmer_Walk_strip15_2
+  - first:
+      213: -5372564381764449656
+    second: 4_Farmer_Walk_strip15_3
+  - first:
+      213: -237222348155045919
+    second: 4_Farmer_Walk_strip15_4
+  - first:
+      213: -8652366468150110759
+    second: 4_Farmer_Walk_strip15_5
+  - first:
+      213: -3075788989341462073
+    second: 4_Farmer_Walk_strip15_6
+  - first:
+      213: 491717809214066311
+    second: 4_Farmer_Walk_strip15_7
+  - first:
+      213: -6916398683624384839
+    second: 4_Farmer_Walk_strip15_8
+  - first:
+      213: 5517168401849462901
+    second: 4_Farmer_Walk_strip15_9
+  - first:
+      213: -8835054243621867706
+    second: 4_Farmer_Walk_strip15_10
+  - first:
+      213: 6241941767231248003
+    second: 4_Farmer_Walk_strip15_11
+  - first:
+      213: 1026498906585464821
+    second: 4_Farmer_Walk_strip15_12
+  - first:
+      213: 6052771048386678072
+    second: 4_Farmer_Walk_strip15_13
+  - first:
+      213: -5229868793303907302
+    second: 4_Farmer_Walk_strip15_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 91
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4701560e87c4e4c0800000000000000
+      internalID: -4259059934780389556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 98
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c3ccc594915b26e0800000000000000
+      internalID: -1861304322377333816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_2
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 0
+        width: 104
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e6ba2d14904ceb0800000000000000
+      internalID: -4700621932755980712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_3
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0
+        width: 109
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a830ce821d075b0800000000000000
+      internalID: -5372564381764449656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_4
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 0
+        width: 112
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e73f6df78735bcf0800000000000000
+      internalID: -237222348155045919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_5
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 0
+        width: 107
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d559671a8e9ce780800000000000000
+      internalID: -8652366468150110759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_6
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1
+        width: 96
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c19e3ed53a9055d0800000000000000
+      internalID: -3075788989341462073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_7
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1
+        width: 90
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e00f30ebee2d600800000000000000
+      internalID: 491717809214066311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_8
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 0
+        width: 97
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6d699ba040400a0800000000000000
+      internalID: -6916398683624384839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_9
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 0
+        width: 102
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5703f362e6be09c40800000000000000
+      internalID: 5517168401849462901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_10
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 0
+        width: 109
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f6c9db9f4936580800000000000000
+      internalID: -8835054243621867706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_11
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 0
+        width: 112
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3861e7057f4df9650800000000000000
+      internalID: 6241941767231248003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_12
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 0
+        width: 112
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff7a51215bde3e00800000000000000
+      internalID: 1026498906585464821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_13
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 0
+        width: 103
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d4bd51333cff350800000000000000
+      internalID: 6052771048386678072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Farmer_Walk_strip15_14
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 0
+        width: 90
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a144831aa06cb67b0800000000000000
+      internalID: -5229868793303907302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
