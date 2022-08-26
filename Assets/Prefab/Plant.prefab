@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4270920673139311326}
   - component: {fileID: 3514017525628541936}
-  - component: {fileID: 5429662484514693565}
   - component: {fileID: 7680345619656319314}
+  - component: {fileID: 2408955106624235586}
   m_Layer: 8
   m_Name: Plant
   m_TagString: Plant
@@ -84,32 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5429662484514693565
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2420804868606877380}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &7680345619656319314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,10 +99,34 @@ MonoBehaviour:
   maxHealth: 100
   health: 0
   healthBar: {fileID: 5009892685108581114}
-  pickupRenderer: {fileID: 8557129694722669887, guid: 2f66395801ad1ed36bd5fdabf1a3e9c1,
-    type: 3}
   pickup: {fileID: 6833391693450995367, guid: 2f66395801ad1ed36bd5fdabf1a3e9c1, type: 3}
   pickupImage: {fileID: 0}
+--- !u!61 &2408955106624235586
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2420804868606877380}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &5172926137439947553
 GameObject:
   m_ObjectHideFlags: 0
