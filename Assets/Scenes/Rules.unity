@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120.8, y: -29}
-  m_SizeDelta: {x: 305.42126, y: 106.681915}
+  m_AnchoredPosition: {x: 120.8, y: -37.72}
+  m_SizeDelta: {x: 305.42126, y: 124.11621}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &94985904
 MonoBehaviour:
@@ -190,8 +190,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Pressione espa\xE7o proximo a uma planta para atacala ou proximo a um
-    animal para abduzilo"
+  m_Text: "Pressione Espa\xE7o pr\xF3ximo a uma planta para destru\xED-la ou proximo
+    a um animal para abduzi-lo."
 --- !u!222 &94985905
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -526,7 +526,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Use as Setas para se mover pelo mapa
+  m_Text: Use as setas para se mover pelo mapa.
 --- !u!222 &626049064
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -932,7 +932,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -155, y: -26}
+  m_AnchoredPosition: {x: -164.2, y: -42.5}
   m_SizeDelta: {x: 208.82693, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1827661488
@@ -1247,8 +1247,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -199, y: 74}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -171.47, y: 74}
+  m_SizeDelta: {x: 155.05565, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956421495
 MonoBehaviour:

@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    //variavel animação
+    public PlayerAnimationController playerAnim;
+    //tela de perdeu
+    [SerializeField] private GameObject loseGame;
+
+
     [Header("Attack")]
     public float attackRange = 1f;
     public Transform attackPoint;
@@ -30,6 +36,8 @@ public class Player : MonoBehaviour
         position.x = position.x + 0.1f * horizontal;
         position.y = position.y + 0.1f * vertical;
         transform.position = position;
+        playerAnim.PlayAnimation("playerWalk");
+
 
         if (Input.GetKeyDown(KeyCode.Space)) {
             Attack();
@@ -42,6 +50,8 @@ public class Player : MonoBehaviour
         foreach (Collider2D collectable in hits) {
             if (collectable.gameObject.CompareTag("Plant")) {
                 collectable.GetComponent<Plant>().TakeDamage(attackStrength);
+                //animação do player atacando
+                playerAnim.PlayAnimation("playerAtaque");
             }
         }
     }
@@ -53,6 +63,8 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage) {
         if (!healthBar.gameObject.activeSelf) {
             healthBar.gameObject.SetActive(true);
+            //animação do player sendo prejudicado
+            playerAnim.PlayAnimation("playerAtacado");
         }
 
         health -= damage;
@@ -64,6 +76,8 @@ public class Player : MonoBehaviour
     }
 
     void Die() {
-        SceneManager.LoadScene("Intro");
+        //SceneManager.LoadScene("Intro");
+        //ativa a imagem de perdedor
+        loseGame.SetActive(true);
     }
 }

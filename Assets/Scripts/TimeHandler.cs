@@ -8,6 +8,8 @@ public class TimeHandler : MonoBehaviour
 {
     public float Countdown;
     public Text countdownText;
+    [SerializeField] private GameObject winGame;
+    [SerializeField] private GameObject loseGame;
 
     // Update is called once per frame
     void Update() {
@@ -15,7 +17,11 @@ public class TimeHandler : MonoBehaviour
         countdownText.text = Mathf.CeilToInt(Countdown).ToString();
         
         if (Countdown <= 0) {
-            SceneManager.LoadScene("Intro");
+            //ativa a imagem de vencedor
+            winGame.SetActive(true);
+
+            //ativa a imagem de perdedor
+            //loseGame.SetActive(true);
         }
 
     }
