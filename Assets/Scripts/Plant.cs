@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Plant : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int health;
-
-    public HealthBar healthBar;
 
     public GameObject pickup;
     public Sprite pickupImage;
+    
+    [Header("Life")]
+    public int maxHealth = 100;
+    public int health;
+    public HealthBar healthBar;
 
     void Start() {
         health = maxHealth;

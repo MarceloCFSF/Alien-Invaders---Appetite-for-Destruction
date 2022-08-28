@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class Intro : MonoBehaviour
 {
-    public Text AnyKeyText;
+    public float anyKeyText;
+    [SerializeField] private Text AnyKeyText;
 
 
     //variável para armazenar o nome da cena para localizá-la posteriormente
@@ -14,19 +15,20 @@ public class Intro : MonoBehaviour
 
     void Start()
     {
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Time.timeSinceLevelLoad > 2)
-        //{
-            //if ((int)(Time.timeSinceLevelLoad * 2) % 2 == 0)
-                //AnyKeyText.gameObject.SetActive(true);
-            //else
-                //AnyKeyText.gameObject.SetActive(false);
-        //}
+
+        //Faz o texto piscar
+        anyKeyText = Mathf.PingPong(Time.time, 1f);
+        
+        Color color = GetComponent<Text>().color;
+        GetComponent<Text>().color = new Vector4(color.r, color.g, color.b, anyKeyText);
+        
+
+        //Verifica se o usuário pressionou alguma tecla
         if (Input.anyKey)
         {
             SceneManager.LoadScene("Menu");
@@ -37,10 +39,4 @@ public class Intro : MonoBehaviour
 
 
 }
-
-
-
-
-
-
 

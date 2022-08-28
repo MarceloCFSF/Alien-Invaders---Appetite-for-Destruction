@@ -45,6 +45,16 @@ public class Farmer : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "Player") {
+            Player player = other.GetComponent<Player>();
+
+            if (player) {
+                player.TakeDamage(20);
+            }
+        }
+    }
+
     void FieldOfViewCheck() {
         Collider2D[] rangeChecks = Physics2D.OverlapCircleAll(transform.position, radius, playerLayer);
 

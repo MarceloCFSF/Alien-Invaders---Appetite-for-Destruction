@@ -1,12 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    [Header("Attack")]
     public float attackRange = 1f;
-    public LayerMask collectableLayers;
+    public Transform attackPoint;
+    public LayerMask attackLayer;
     public int attackStrength = 20;
+
+    [Header("Life")]
+    public int maxHealth = 100;
+    public int health;
+    public HealthBar healthBar;
+
+    private void Start() {
+        health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
 
     void Update()
     {
@@ -24,15 +37,33 @@ public class Player : MonoBehaviour
     }
 
     void Attack() {
-        Collider2D[] hitPlants = Physics2D.OverlapCircleAll(transform.position, attackRange, collectableLayers);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, attackLayer);
 
-        foreach (Collider2D collectable in hitPlants)
-        {
-            collectable.GetComponent<Plant>().TakeDamage(attackStrength);
+        foreach (Collider2D collectable in hits) {
+            if (collectable.gameObject.CompareTag("Plant")) {
+                collectable.GetComponent<Plant>().TakeDamage(attackStrength);
+            }
         }
     }
 
     private void OnDrawGizmosSelected() {
-        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    public void TakeDamage(int damage) {
+        if (!healthBar.gameObject.activeSelf) {
+            healthBar.gameObject.SetActive(true);
+        }
+
+        health -= damage;
+        healthBar.SetHealth(health);
+
+        if (health <= 0) {
+            Die();
+        }
+    }
+
+    void Die() {
+        SceneManager.LoadScene("Intro");
     }
 }
