@@ -215,7 +215,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
-  ringBufferMode: 0
+  ringBufferMode: 2
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
@@ -771,7 +771,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 900
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -4905,7 +4905,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd861864ef2403047b2445a07ad95fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnyKeyText: 0
+  anyKeyText: 0
+  AnyKeyText: {fileID: 0}
 --- !u!4 &713950265
 Transform:
   m_ObjectHideFlags: 0
@@ -9987,7 +9988,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd861864ef2403047b2445a07ad95fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnyKeyText: 2
+  anyKeyText: 0
+  AnyKeyText: {fileID: 0}
 --- !u!1 &1873682459
 GameObject:
   m_ObjectHideFlags: 0
@@ -10086,7 +10088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd861864ef2403047b2445a07ad95fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnyKeyText: 0
+  anyKeyText: 0
+  AnyKeyText: {fileID: 0}
 --- !u!114 &1902367016
 MonoBehaviour:
   m_ObjectHideFlags: 0
