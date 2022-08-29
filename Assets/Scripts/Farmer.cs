@@ -76,9 +76,9 @@ public class Farmer : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Player") {
-            Player player = other.GetComponent<Player>();
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.tag == "Player") {
+            Player player = other.gameObject.GetComponent<Player>();
 
             if (player) {
                 player.TakeDamage(20);

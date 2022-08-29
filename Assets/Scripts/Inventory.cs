@@ -12,7 +12,6 @@ public class Inventory : MonoBehaviour
     public void Start() {
         goal = FindGameObjectsWithLayer(LayerMask.NameToLayer("Collectable"));
         Debug.Log("Total Plants: " + goal);
-
     }
 
     public void PlantCollected()
@@ -25,13 +24,13 @@ public class Inventory : MonoBehaviour
     }
 
     int FindGameObjectsWithLayer (int layer) { 
-        GameObject[] goArray = FindObjectsOfType(typeof(GameObject)) as GameObject[]; 
-        List<GameObject> goList = new List<GameObject>(); 
-        for (int i = 0; i < goArray.Length; i++) { 
-            if (goArray[i].layer == layer) { 
-                goList.Add(goArray[i]); 
-            }
-        }
-        return goList.Count; 
+        Plant[] goArray = FindObjectsOfType(typeof(Plant)) as Plant[]; 
+        // List<GameObject> goList = new List<GameObject>(); 
+        // for (int i = 0; i < goArray.Length; i++) { 
+        //     if (goArray[i].layer == layer) { 
+        //         goList.Add(goArray[i]); 
+        //     }
+        // }
+        return goArray.Length; 
     }
 }
