@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
+    public GameManager GM;
     public int Plants { get; private set; }
     private int goal;
 
@@ -19,20 +20,17 @@ public class Inventory : MonoBehaviour
         Plants++;
         Debug.Log("plants: " + Plants);
         if (Plants == goal) {
-            SceneManager.LoadScene("Intro");
+            GM.Win();
         }
     }
 
     int FindGameObjectsWithLayer (int layer) { 
         GameObject[] goArray = FindObjectsOfType(typeof(GameObject)) as GameObject[]; 
-        Debug.Log("GameObjects: " + goArray.Length);
-        Debug.Log("Layer: " + layer);
         List<GameObject> goList = new List<GameObject>(); 
         for (int i = 0; i < goArray.Length; i++) { 
             if (goArray[i].layer == layer) { 
                 goList.Add(goArray[i]); 
             }
-            Debug.Log("Layer Obj: " + goArray[i].layer);
         }
         return goList.Count; 
     }

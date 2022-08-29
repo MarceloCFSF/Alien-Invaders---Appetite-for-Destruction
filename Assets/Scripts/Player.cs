@@ -5,17 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    //variavel animação
-    public PlayerAnimationController playerAnim;
-    //tela de perdeu
-    [SerializeField] private GameObject loseGame;
+    public GameManager GM;
 
+    [Header("Movement")]
+    public float moveSpeed = 5f;
+    private Rigidbody2D rb;
+    private Vector2 movement;
+    private Animator animator;
+    private Vector3 scale;
 
     [Header("Attack")]
     public float attackRange = 1f;
     public Transform attackPoint;
     public LayerMask attackLayer;
     public int attackStrength = 20;
+    public float attackRate = 1f;
+    private float nextAttackTime = 0f;
 
     [Header("Life")]
     public int maxHealth = 100;
@@ -25,33 +30,45 @@ public class Player : MonoBehaviour
     private void Start() {
         health = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
+        scale = transform.localScale;
+    }
+
+    private void FixedUpdate() {
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-        
-        Vector2 position = transform.position;
-        position.x = position.x + 0.1f * horizontal;
-        position.y = position.y + 0.1f * vertical;
-        transform.position = position;
-        playerAnim.PlayAnimation("playerWalk");
+        movement.x = Input.GetAxis("Horizontal");
+        movement.y = Input.GetAxis("Vertical");
 
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (movement.x < 0) {
+            transform.localScale = new Vector3(-scale.x, scale.y, scale.z);
+        } else if (movement.x > 0) {
+            transform.localScale = new Vector3(scale.x, scale.y, scale.z);
+        }
+
+        if (Time.time >= nextAttackTime && Input.GetKeyDown(KeyCode.Space)) {
             Attack();
+            nextAttackTime = Time.time + 1f / attackRate;
         }
     }
 
     void Attack() {
+        animator.SetTrigger("Attack");
         Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, attackLayer);
 
         foreach (Collider2D collectable in hits) {
             if (collectable.gameObject.CompareTag("Plant")) {
                 collectable.GetComponent<Plant>().TakeDamage(attackStrength);
-                //animação do player atacando
-                playerAnim.PlayAnimation("playerAtaque");
+            }
+            if (collectable.gameObject.CompareTag("Animal")) {
+                collectable.GetComponent<Animal>().TakeDamage(attackStrength);
             }
         }
     }
@@ -61,23 +78,12 @@ public class Player : MonoBehaviour
     }
 
     public void TakeDamage(int damage) {
-        if (!healthBar.gameObject.activeSelf) {
-            healthBar.gameObject.SetActive(true);
-            //animação do player sendo prejudicado
-            playerAnim.PlayAnimation("playerAtacado");
-        }
-
         health -= damage;
+        animator.SetTrigger("Hurt");
         healthBar.SetHealth(health);
 
         if (health <= 0) {
-            Die();
+            GM.Die();
         }
-    }
-
-    void Die() {
-        //SceneManager.LoadScene("Intro");
-        //ativa a imagem de perdedor
-        loseGame.SetActive(true);
     }
 }

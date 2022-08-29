@@ -16,6 +16,9 @@ public class Farmer : MonoBehaviour
     public float angle;
 
     public bool canSeePlayer = false;
+    
+    public float wanderRadius = 5f;
+    private Animator animator;
 
     void Start()
     {
@@ -24,6 +27,9 @@ public class Farmer : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         target = GameObject.Find("Player").transform;
+        target = GameObject.Find("Player").transform;
+
+        animator = gameObject.GetComponent<Animator>();
 
         StartCoroutine(FOVRoutine());
     }
@@ -31,7 +37,32 @@ public class Farmer : MonoBehaviour
     void Update() {
         if (canSeePlayer) {
             agent.SetDestination(target.position);
+        } else {
+            Wander();
         }
+        Animation();
+    }
+
+    void Animation() {
+        animator.SetFloat("Horizontal", agent.velocity.x);
+        animator.SetFloat("Vertical", agent.velocity.y);
+    }
+
+    Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask) {
+        Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * distance;
+        
+        randomDirection += origin;
+        
+        NavMeshHit navHit;
+        
+        NavMesh.SamplePosition (randomDirection, out navHit, distance, layermask);
+        
+        return navHit.position;
+    }
+
+    void Wander() {
+        Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+        agent.SetDestination(newPos);
     }
 
     private IEnumerator FOVRoutine() {

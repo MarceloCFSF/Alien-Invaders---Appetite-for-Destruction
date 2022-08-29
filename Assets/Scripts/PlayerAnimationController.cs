@@ -6,7 +6,7 @@ public class PlayerAnimationController : MonoBehaviour
 {
     public Animator playerAnimator;
 
-    public void PlayerAnimation(string animationName)
+    public void PlayAnimation(string animationName)
     {
         playerAnimator.Play(animationName);
     }

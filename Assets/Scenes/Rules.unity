@@ -190,8 +190,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Pressione Espa\xE7o pr\xF3ximo a uma planta para destru\xED-la ou proximo
-    a um animal para abduzi-lo."
+  m_Text: "Pressione Espa\xE7o pr\xF3ximo a uma plant ou animal para destru\xED-los
+    e coleta-los."
 --- !u!222 &94985905
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1041,8 +1041,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fuja dos Fazendeiros. Caso um deles encoste em voce sua vida sera reduzida
-    ate zero, perdendo o jogo
+  m_Text: "Fuja dos Fazendeiros. Caso um deles encoste em voc\xEA sua vida ser\xE1
+    reduzida at\xE9 zero, perdendo o jogo"
 --- !u!222 &1862189567
 CanvasRenderer:
   m_ObjectHideFlags: 0

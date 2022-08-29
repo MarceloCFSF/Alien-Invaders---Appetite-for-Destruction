@@ -12,8 +12,6 @@ public class Level : MonoBehaviour
     public Button BtL2;
     public Button BtL3;
     public Button BtL4;
-    public Button BtL5;
-
 
     void Start()
     {
@@ -31,9 +29,6 @@ public class Level : MonoBehaviour
 
         Button btn5 = BtL4.GetComponent<Button>();
         btn5.onClick.AddListener(TaskOnClick5);
-
-        Button btn6 = BtL5.GetComponent<Button>();
-        btn6.onClick.AddListener(TaskOnClick6);
     }
 
     void TaskOnClick()
@@ -60,14 +55,4 @@ public class Level : MonoBehaviour
     {
         SceneManager.LoadScene("Level4");
     }
-
-    void TaskOnClick6()
-    {
-        SceneManager.LoadScene("Level5");
-    }
-
-
-
-
-
 }
