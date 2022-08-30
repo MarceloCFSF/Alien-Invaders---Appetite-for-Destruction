@@ -5,24 +5,26 @@ using UnityEngine.UI; //acessar elementos UI pelo código
 
 public class SoundManager : MonoBehaviour
 {
+
+    //variavel que já inicia o som ligado
+    //private bool estadoSom = true;
     public Slider sliderVolume;
-    //public AudioSource AudioSource;
-    //[SerializeField] Slider SliderVolume;
+    //variavel para referencia ao audiosource da música de fundo
+    /*[SerializeField] private AudioSource fundoMusical;
+    [SerializeField] private Sprite somLigadoSprite;
+    [SerializeField] private Sprite somDesligadoSprite;
 
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        if(!PlayerPrefs.Haskey("musicVolume"))
-        {
-            PlayerPrefs.SetFloat("musicVolume", 1);
-           Load();
-        }
-        else
-        {
-            Load();
-        }
-    }*/
+    [SerializeField] private Image muteImage;*/
 
+    //[SerializeField] Image soundOnIcon;
+    //[SerializeField] Image soundOffIcon;
+    //private bool muted = false;
+
+    [SerializeField] private Sprite soundOnImage;
+    [SerializeField] private Sprite soundOffImage;
+    public Button button;
+    private bool isOn = true;
+    public AudioSource audioSource;
 
 
     //função para alterar o volume
@@ -30,15 +32,55 @@ public class SoundManager : MonoBehaviour
     {
         AudioListener.volume = sliderVolume.value;
         print("Volume = " + sliderVolume.value);
+
+        //float valorVolume = sliderVolume.value;
+
+        //salva volume atual
+        PlayerPrefs.SetFloat("sliderVolume", sliderVolume.value);
     }
 
 
 
-    //private void Save()
-    //{
-    //PlayerPrefs - armazena as preferencias do usuário nas sessões do jogo
-    // "musicVolume" = keyname
-    //PlayerPrefs.setFloat("musicVolume", sliderVolume.value);
-    //}
+    void Start()
+    {
+
+    }
+
+    public void ButtonClicked()
+    {
+        if (isOn)
+        {
+            button.image.sprite = soundOffImage;
+            isOn = false;
+            audioSource.mute = true;
+        }
+        else
+        {
+            button.image.sprite = soundOnImage;
+            isOn = true;
+    
+            audioSource.mute = false;
+        }
+    }
+
+
 
 }
+
+//função mude/unmute
+//public void LigarDesligarSom()
+/*{
+    //caso o estado do som seja verdadeiro, ao clicar desliga
+    estadoSom = !estadoSom;
+    fundoMusical.enable = estadoSom;
+
+    if (estadoSom)
+    {
+        muteImage.sprite = somLigadoSprite;
+    }
+    else
+    {
+        muteImage.sprite = somDesligadoSprite;
+    }
+
+}*/

@@ -107,7 +107,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!114 &1044678803534779339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +130,7 @@ MonoBehaviour:
   radius: 2
   angle: 67
   canSeePlayer: 0
+  wanderRadius: 5
 --- !u!195 &2382518922920049250
 NavMeshAgent:
   m_ObjectHideFlags: 0

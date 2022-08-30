@@ -102,13 +102,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GM: {fileID: 0}
   moveSpeed: 5
-  attackRange: 0.1
+  attackRange: 0.2
   attackPoint: {fileID: 9185040621807224783}
   attackLayer:
     serializedVersion: 2
     m_Bits: 256
   attackStrength: 20
-  attackRate: 1
+  attackRate: 3
   maxHealth: 100
   health: 0
   healthBar: {fileID: 0}
